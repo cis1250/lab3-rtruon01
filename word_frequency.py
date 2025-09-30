@@ -33,5 +33,21 @@ user_sentence = input("Enter a sentence: ")
 
 while (is_sentence(user_sentence) == False):
     print("This does not meet the criteria for a sentence.")
-    user_input = input("Enter a sentence: ")
+    user_sentence = input("Enter a sentence: ")
     
+
+list1 = list(set(user_sentence.lower().split()))
+compare = list1
+
+num_words = len(list1)
+a = 0
+
+while a < num_words:
+    counter = 0
+    for i in range(num_words):
+        if list1[a].lower().strip() == compare[i].lower().strip():
+            counter += 1
+            
+
+    print(list1[a].strip(),":", counter)
+    a += 1
